@@ -1,0 +1,66 @@
+<%- include('./partials/head.ejs') %>
+
+<main>
+  <h1>FDND</h1>
+  <h2><%= squad.name %></h2>
+  <h3>Kies een hobbie!</h3>
+
+  
+  <section>
+   <!-- Hier komen de members, maar eerst de hobbie dingen -->
+    
+    <button class="sport">
+      <img class="hobby" src="/sport.png" alt="sport"/>
+    </button> 
+
+    <button>
+      <img class="hobby" src="/games.png" alt="games"/>
+    </button>
+
+
+    <button>
+      <img class="hobby" src="/music.png" alt="music"/>
+    </button>
+
+
+    <button>
+      <img class="hobby" src="/social.png" alt="social"/>
+    </button>
+
+
+    <button>
+      <img class="hobby" src="/books.png" alt="books"/>
+    </button>
+
+
+    <button>
+      <img class="hobby" src="/laptop.png" alt="laptop"/>
+    </button>
+    
+<div class="articles">
+    <% squad.members.forEach(member => { %> 
+
+      <article> 
+
+  <% if (member.avatar) { %> 
+  
+        <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" /> 
+  
+        <% }else{ %> 
+  
+        <img src="/placeholder.jpg" alt="Placeholder avatar" /> 
+  
+        <% } %> 
+  
+        <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2> 
+  
+      </article> 
+  
+      <% }) %> 
+    </div>
+
+
+  </section>
+</main>
+
+<%- include('./partials/foot.ejs') %>
