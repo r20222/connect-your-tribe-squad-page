@@ -45,7 +45,7 @@ article, button {
   text-align: center;
   background: linear-gradient(#050542,#66E5BF);
   border-radius: 1rem;
-  border:none;
+  border: 2px solid #66E5BF;
 }
 
 article h2 {
