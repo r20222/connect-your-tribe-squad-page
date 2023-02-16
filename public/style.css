@@ -58,6 +58,24 @@ article img {
   width: 5rem;
   border-radius: 50%;
 }
+
+
+/* return button footer */
+
+.return{
+  display: none;
+  border:none;
+  background: none;
+}
+
+
+
+
+
+
+
+
+
 /* article a {
   position: absolute;
   top: 0;
