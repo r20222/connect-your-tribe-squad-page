@@ -14,6 +14,7 @@ main{
 main > h1, main >  h2{
   color: white;
   margin-left: 2rem;
+  margin-right: 2rem;
 }
 main > h3{
   color: hotpink;
@@ -26,6 +27,11 @@ main section {
   gap: 0.5rem;
   justify-content: center;
   margin-top: 2rem;
+}
+
+/* images in the buttons */
+.hobby{
+  height: 6rem;
 }
 
 .articles{
@@ -67,6 +73,7 @@ article img {
   border:none;
   background: none;
 }
+
 
 
 

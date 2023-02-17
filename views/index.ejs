@@ -2,40 +2,47 @@
 
 <main>
   <h1>FDND</h1>
-  <h2><%= squad.name %> de beste squad van de opleiding!!</h2>
-  <h3>Kies een hobbie!</h3>
+  <h2><%= squad.name %> is de beste squad van de opleiding!!</h2>
+  <h3>Kies een hobby!</h3>
 
   
   <section>
+    <!-- <div class="intro-text">
+      
+    </div> -->
    <!-- Hier komen de members, maar eerst de hobbie dingen -->
+    <!-- buttons in een div zetten om netjes uit te lijnen op de desktop-->
+
     
-    <button class="sport">
-      <img class="hobby" src="/sport.png" alt="sport"/>
-    </button> 
+      <button class="sport">
+        <img class="hobby" src="/sport.png" alt="sport"/>
+      </button> 
 
-    <button>
-      <img class="hobby" src="/games.png" alt="games"/>
-    </button>
-
-
-    <button>
-      <img class="hobby" src="/music.png" alt="music"/>
-    </button>
+      <button>
+        <img class="hobby" src="/games.png" alt="games"/>
+      </button>
 
 
-    <button>
-      <img class="hobby" src="/social.png" alt="social"/>
-    </button>
+      <button>
+        <img class="hobby" src="/music.png" alt="music"/>
+      </button>
 
 
-    <button>
-      <img class="hobby" src="/books.png" alt="books"/>
-    </button>
+      <button>
+        <img class="hobby" src="/social.png" alt="social"/>
+      </button>
 
 
-    <button>
-      <img class="hobby" src="/laptop.png" alt="laptop"/>
-    </button>
+      <button>
+        <img class="hobby" src="/books.png" alt="books"/>
+      </button>
+
+
+      <button>
+        <img class="hobby" src="/laptop.png" alt="laptop"/>
+      </button>
+   
+
     
 <div class="articles">
     <% squad.members.forEach(member => { %> 
