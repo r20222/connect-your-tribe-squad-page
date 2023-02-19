@@ -22,6 +22,16 @@ app.get('/', (request, response) => {
   response.render('index', data)
 })
 
+// Maak een route voor sport.ejs
+app.get('/sport', (request, response) => {
+  console.log(request.query.squad)
+
+  response.render('sport', data)
+})
+
+
+
+
 // app.get('/members', (request, response) => {
 //   response.send('Joepie!!')
 // })

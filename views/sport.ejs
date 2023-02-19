@@ -1,0 +1,30 @@
+<%- include('./partials/head.ejs') %>
+
+
+<main>
+    <h1 class="FDND">FDND</h1>
+    <!-- <h2 class="explanation"><%= squad.name %> is de beste squad van de opleiding!!</h2>
+    <h3 class="chosen-hobby"></h3> -->
+
+
+<% squad.members.forEach(member => { %> 
+    <article> 
+<% if (member.avatar) { %> 
+
+      <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" /> 
+
+      <% }else{ %> 
+
+      <img src="/placeholder.jpg" alt="Placeholder avatar" /> 
+
+      <% } %> 
+
+      <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2> 
+
+    </article> 
+
+    <% }) %> 
+
+</main>
+
+<%- include('./partials/foot.ejs') %>

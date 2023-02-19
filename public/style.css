@@ -8,10 +8,46 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background: #101010;
 }
+
+main {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 0.4fr 0.4fr 1.5fr 1.5fr 1.5fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "FDND FDND"
+    "explanation explanation"
+    "chosen-hobby chosen-hobby"
+    "button-sport button-gaming"
+    "button-music button-social"
+    "button-read button-laptop"
+    ". .";
+}
+
+.FDND { grid-area: FDND; }
+
+.explanation { grid-area: explanation; }
+
+.chosen-hobby { grid-area: chosen-hobby; }
+
+.button-sport { grid-area: button-sport; }
+
+.button-gaming { grid-area: button-gaming; }
+
+.button-music { grid-area: button-music; }
+
+.button-social { grid-area: button-social; }
+
+.button-read { grid-area: button-read; }
+
+.button-laptop { grid-area: button-laptop; }
+
+/* main eigenschappen h1, h2 & h3 */
 main{
   margin-top: 2rem;
 }
-main > h1, main >  h2{
+.FDND, .explanation{
   color: white;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -21,18 +57,179 @@ main > h3{
   margin-left: 2rem;
 }
 
-main section {
+
+/* images in the buttons */
+.hobby, article > img{
+  height: 6rem;
+}
+
+/* buttons */
+
+a.button-link, article {
+  position: relative;
+  min-width: 9.5rem;
+  min-height: 9.5rem;
+  margin: 0.5rem 0.5rem;
+  background: linear-gradient(#050542,#66E5BF);
+  border-radius: 1rem;
+  border: 2px solid #66E5BF; 
+}
+.button-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+}
+.button-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+}
+
+/* onzichtbare tekst, komt pas bij mediaquery tevoorschijn */
+/* mobile modeee */
+p.button-text{
+  display:none;
+}
+.button-text, p.button-text{
+  display: none;
+}
+
+/* mediaqueries */
+
+@media screen and (min-width: 830px){
+  main {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 0.1fr 0.3fr 1.5fr 1.5fr 1.5fr 0.2fr;
+    gap: 1rem 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "FDND . . . . "
+      " . explanation explanation . . "
+      " . chosen-hobby . . . "
+      " . button-sport button-gaming button-music . "
+      " . button-social button-read button-laptop . "
+      " . . . . ."
+      ". . . . .";
+  }
+  
+
+  /* deze namen kloppen alleen op mobile-first */
+  .button-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+  }
+  .button-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+  }
+
+
+
+  a.button-link{
+    width: 100%;
+    height: 12rem;
+  }
+ 
+  p.button-text{
+    display: grid;
+    font-size: 3rem;
+    color:white;
+    justify-content: center;
+    align-content:center;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* deze maakt de tekst invisible */
+  a.button-link > .button-text {
+    position:absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 400ms, visibility 0ms 400ms;
+  }
+
+  .button-link:hover > p.button-text{
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    opacity:1;
+    transition: opacity 400ms;
+    align-content: center;
+    justify-content: center;
+  }
+
+
+
+
+
+/* tekst bovenin */
+  .FDND{
+    color: white;
+    margin-left: 2rem;
+    margin-right: 0rem;
+    justify-self: flex-start;
+    
+  }
+  .explanation{
+    color: white;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    justify-self: flex-start;
+  }
+
+  main > h3{
+    color: hotpink;
+    margin-left: 0rem;
+    justify-self: flex-start;
+  }
+}
+
+
+
+/* groter scherm desktop */
+@media screen and (min-width: 1200px){
+  .button-text{
+    display: grid;
+    font-size: 4rem;
+    color:white;
+  }
+}
+
+
+/* nog groter scherm desktop */
+@media screen and (min-width: 1400px){
+  .button-text{
+    display: grid;
+    font-size: 5rem;
+    color:white;
+  }
+}
+
+
+
+
+/* 
+
+main section{
   display: flex;
   flex-flow: row wrap;
   gap: 0.5rem;
   justify-content: center;
   margin-top: 2rem;
-}
+} */
 
-/* images in the buttons */
-.hobby{
-  height: 6rem;
-}
+
+/* 
 
 .articles{
   display:none;
@@ -51,8 +248,9 @@ article, button {
   text-align: center;
   background: linear-gradient(#050542,#66E5BF);
   border-radius: 1rem;
-  border: 2px solid #66E5BF;
-}
+  border: 2px solid #66E5BF; */
+  /* flex-grow: 1; */
+/* }
 
 article h2 {
   font-size: 1rem;
@@ -64,37 +262,83 @@ article img {
   width: 5rem;
   border-radius: 50%;
 }
-
+ */
 
 /* return button footer */
 
-.return{
+/* .return{
   display: none;
   border:none;
   background: none;
-}
-
-
-
-
-
-
-
-
-
-
-/* article a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 2rem;
-  display: block;
-}
-article a:hover {
-  background: #fff2;
-}
-article a span {
-  display: none;
 } */
+
+
+
+
+
+/* mediaqueries */
+
+/* desktop versie */
+
+/* ik wil dit netjes gaan proberen op te lossen met grid */
+/* het werkt nog niet zoals ik wil, maar door er aanpassingen mee te maken moet het goedkomen */
+
+/* @media screen and (min-width: 630px){
+  main section{
+    display: grid;
+   
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1.2fr 1.2fr 0.8fr;
+    grid-template-rows: 1fr 1.2fr 1.2fr 0.9fr;
+    gap: 16px;
+  }
+  
+  .FDND {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  .explanation {
+    grid-area: 1 / 2 / 2 / 5;
+  }
+  
+  .button-sport {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  
+  .button-gaming {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  
+  .button-music {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+  
+  .button-social {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  
+  .button-read {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  
+  .button-laptop {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+  
+  .chosen-hobby {
+    grid-area: 1 / 5 / 2 / 6;
+  }
+  
+  section {
+    grid-area: 2 / 2 / 4 / 5;
+  }
+  
+  
+}
+
+
+
+ */

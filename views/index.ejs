@@ -1,73 +1,47 @@
 <%- include('./partials/head.ejs') %>
 
 <main>
-  <h1>FDND</h1>
-  <h2><%= squad.name %> is de beste squad van de opleiding!!</h2>
-  <h3>Kies een hobby!</h3>
-
-  
-  <section>
-    <!-- <div class="intro-text">
-      
-    </div> -->
-   <!-- Hier komen de members, maar eerst de hobbie dingen -->
-    <!-- buttons in een div zetten om netjes uit te lijnen op de desktop-->
-
-    
-      <button class="sport">
-        <img class="hobby" src="/sport.png" alt="sport"/>
-      </button> 
-
-      <button>
-        <img class="hobby" src="/games.png" alt="games"/>
-      </button>
-
-
-      <button>
-        <img class="hobby" src="/music.png" alt="music"/>
-      </button>
-
-
-      <button>
-        <img class="hobby" src="/social.png" alt="social"/>
-      </button>
-
-
-      <button>
-        <img class="hobby" src="/books.png" alt="books"/>
-      </button>
-
-
-      <button>
-        <img class="hobby" src="/laptop.png" alt="laptop"/>
-      </button>
+  <h1 class="FDND">FDND</h1>
+  <h2 class="explanation"><%= squad.name %> is de beste squad van de opleiding!!</h2>
+  <h3 class="chosen-hobby">Kies een hobby!</h3>
    
+  
+  <a class="button-left button-sport button-link" href="/sport">
+    <img class="hobby" src="/sport.png" alt="sport"/>
+    <p class="button-text">Sport</p>
+  </a>
+
+
+  <a class="button-right button-gaming button-link" href="">
+    <img class="hobby" src="/games.png" alt="games"/>
+    <p class="button-text">Gamen</p>
+  </a>
+
+
+  <a class="button-left button-music button-link" href="">
+    <img class="hobby" src="/music.png" alt="music"/>
+    <p class="button-text">Muziek</p>
+  </a>
+
+
+  <a class="button-right button-social button-link" href="">
+    <img class="hobby" src="/social.png" alt="social"/>
+    <p class="button-text">Sociaal</p>
+  </a>
+
+
+  <a class="button-left button-read button-link" href="">
+    <img class="hobby" src="/books.png" alt="books"/>
+    <p class="button-text">Lezen</p>
+  </a>
+
+
+  <a class="button-right button-laptop button-link" href="">
+    <img class="hobby" src="/laptop.png" alt="laptop"/>
+    <p class="button-text">FDND</p>
+  </a>
 
     
-<div class="articles">
-    <% squad.members.forEach(member => { %> 
-
-      <article> 
-
-  <% if (member.avatar) { %> 
-  
-        <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" /> 
-  
-        <% }else{ %> 
-  
-        <img src="/placeholder.jpg" alt="Placeholder avatar" /> 
-  
-        <% } %> 
-  
-        <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2> 
-  
-      </article> 
-  
-      <% }) %> 
-    </div>
-
-
-  </section>
 </main>
 
 <%- include('./partials/foot.ejs') %>
