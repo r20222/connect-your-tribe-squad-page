@@ -1,5 +1,6 @@
 import express from 'express'
 
+// data squad c voor sport (omdat ik niet kan filteren op hobby)
 const url = 'https://whois.fdnd.nl/api/v1/squad/squat-c-2022'
 const data = await fetch(url)
   .then((response) => response.json())
@@ -7,6 +8,14 @@ const data = await fetch(url)
 
 console.log(data)
 
+
+// data squad b voor gamen (omdat ik niet kan filteren op hobby)
+const urlB = 'https://whois.fdnd.nl/api/v1/squad/squad-b-2022'
+const dataB = await fetch(url)
+  .then((response) => response.json())
+  .catch((error) => error)
+
+  console.log(dataB)
 // Maak een nieuwe express app
 const app = express()
 
@@ -22,11 +31,18 @@ app.get('/', (request, response) => {
   response.render('index', data)
 })
 
-// Maak een route voor sport.ejs
+// Maak een route voor sport.ejs van squad c
 app.get('/sport', (request, response) => {
   console.log(request.query.squad)
 
   response.render('sport', data)
+})
+
+// maak een route voor gamen.ejs van squad b
+app.get('/gamen', (request, response) => {
+  console.log(request.query.squad)
+
+  response.render('gamen', dataB)
 })
 
 
