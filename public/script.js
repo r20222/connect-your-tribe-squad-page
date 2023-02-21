@@ -1,3 +1,37 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// oude squadpage, kan eventueel wel weg
+
 // const sportButton = document.querySelector('.sport')
 // const articles = document.querySelector('.articles')
 // const buttons = document.querySelectorAll('button')

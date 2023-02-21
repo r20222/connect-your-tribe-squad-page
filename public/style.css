@@ -9,6 +9,12 @@ body {
   background: #101010;
 }
 
+
+
+
+/* ik wil deze hele grid gaan aanpassen zodat die niet meer zo specifiek is
+een grid zoals dit: https://gridbyexample.com/examples/example1/
+hierdoor word de layout gewoon gemaakt en worden de blokken gewoon gevuld */
 main {  
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -42,6 +48,8 @@ main {
 .button-read { grid-area: button-read; }
 
 .button-laptop { grid-area: button-laptop; }
+
+
 
 /* main eigenschappen h1, h2 & h3 */
 main{

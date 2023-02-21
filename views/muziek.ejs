@@ -3,12 +3,12 @@
 
 <main>
     <h1 class="FDND">FDND</h1>
-    <h2 class="explanation"><%= squad.name %> is de beste squad van de opleiding!!</h2>
-    <h3 class="chosen-hobby">afadsf</h3>
+    <!-- <h2 class="explanation"><%= squad.name %> is de beste squad van de opleiding!!</h2>
+    <h3 class="chosen-hobby"></h3> -->
 
 
 <% squad.members.forEach(member => { %> 
-    <article > 
+    <article> 
 <% if (member.avatar) { %> 
 
       <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" /> 

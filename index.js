@@ -11,11 +11,21 @@ console.log(data)
 
 // data squad b voor gamen (omdat ik niet kan filteren op hobby)
 const urlB = 'https://whois.fdnd.nl/api/v1/squad/squad-b-2022'
-const dataB = await fetch(url)
+const dataB = await fetch(urlB)
   .then((response) => response.json())
   .catch((error) => error)
 
   console.log(dataB)
+
+// data squad a voor muziek (omdat ik niet kan filteren op hobby)
+const urlA = 'https://whois.fdnd.nl/api/v1/squad/squad-a-2022'
+const dataA = await fetch(urlA)
+  .then((response) => response.json())
+  .catch((error) => error)
+
+  console.log(dataA)
+
+
 // Maak een nieuwe express app
 const app = express()
 
@@ -44,6 +54,14 @@ app.get('/gamen', (request, response) => {
 
   response.render('gamen', dataB)
 })
+
+// maak een route voor muziek.ejs voor squad a
+app.get('/muziek', (request, response) => {
+  console.log(request.query.squad)
+
+  response.render('gamen', dataA)
+})
+
 
 
 
