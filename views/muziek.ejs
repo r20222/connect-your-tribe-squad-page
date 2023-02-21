@@ -3,28 +3,30 @@
 
 <main>
     <h1 class="FDND">FDND</h1>
-    <!-- <h2 class="explanation"><%= squad.name %> is de beste squad van de opleiding!!</h2>
-    <h3 class="chosen-hobby"></h3> -->
+    <div class="grid-container-hobby">
+        <h2 class="explanation"><%= squad.name %></h2>
+        <h3 class="chosen-hobby"><img src="/music.png"/></h3>
+    </div>
 
+<div class="members-grid-container">  
+    <% squad.members.forEach(member => { %> 
+        <article> 
+    <% if (member.avatar) { %> 
 
-<% squad.members.forEach(member => { %> 
-    <article> 
-<% if (member.avatar) { %> 
+        <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" /> 
 
-      <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" /> 
+        <% }else{ %> 
 
-      <% }else{ %> 
+        <img src="/placeholder.jpg" alt="Placeholder avatar" /> 
 
-      <img src="/placeholder.jpg" alt="Placeholder avatar" /> 
+        <% } %> 
 
-      <% } %> 
+        <h2 class="article-h2"><%= member.name %> <%= member.prefix %> <%= member.surname %></h2> 
+        <a class="github-link" href="<%= member.gitHubHandle %>" target="_blank"><img src="/github-mark.png" alt="Github account van <%= member.name %>"/></a>
+        </article> 
 
-      <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2> 
-
-    </article> 
-
-    <% }) %> 
-
+        <% }) %> 
+</div>
 </main>
 
 <%- include('./partials/foot.ejs') %>
