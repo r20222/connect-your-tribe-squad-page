@@ -59,7 +59,7 @@ app.get('/gamen', (request, response) => {
 app.get('/muziek', (request, response) => {
   console.log(request.query.squad)
 
-  response.render('gamen', dataA)
+  response.render('muziek', dataA)
 })
 
 
