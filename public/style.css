@@ -28,7 +28,9 @@ main > h3{
   color: hotpink;
   margin-left: 2rem;
 }
-
+.chosen-hobby{
+  color:hotpink;
+}
 /* voor kleinere telefoons 1 button per row */
 .grid-container{
   width: 100%;
