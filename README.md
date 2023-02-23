@@ -39,6 +39,19 @@ Bij het ontwerpen en maken van deze squadpage heb ik gebruik gemaakt van:
 * JavaScript
 * Cyclic.sh
 
+
+### Wat is Node.js?
+
+Dankzij Node.js kunnen we JavaScript op de server bouwen waardoor we snelle websites kunnen maken. Het is opensource en gebruikt node package manager. Het bevat vele packages die je kan gebruiken, en een daarvan is ejs.
+
+### Wat is ejs?
+
+Ejs staat voor embedded JavaScript. Dit is een van de vele packages die beschikbaar is in Node.js. Dankzij ejs kunnen we dynamische HTML pagina's maken dankzij gegevens die op de server worden verstrekt.
+
+### Wat is express?
+
+Express maakt een route waardoor gegevens kunnen worden uitgewisseld tussen bijvoorbeeld ejs en Json.
+
 ## Installatie
 <!-- Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. -->
 
