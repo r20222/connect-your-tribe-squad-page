@@ -5,7 +5,7 @@
     <h1 class="FDND">FDND</h1>
     <div class="grid-container-hobby">
         <h2 class="explanation"><%= squad.name %> is de beste squad van de opleiding!!</h2>
-        <h3 class="chosen-hobby"><img src="/sport.png"></h3>
+        <h3 class="chosen-hobby"><img src="/sport.png" alt="sport"></h3>
     </div>
 
 <div class="members-grid-container">   
@@ -13,7 +13,7 @@
         <article> 
     <% if (member.avatar) { %> 
 
-        <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" /> 
+        <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" > 
 
         <% }else{ %> 
 
