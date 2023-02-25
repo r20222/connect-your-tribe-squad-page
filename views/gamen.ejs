@@ -7,6 +7,11 @@
         <h3 class="chosen-hobby">Gekozen hobby: <img src="/games.png" alt="gamen"></h3>
     </div>
 
+    <!-- in de control flow hieronder wordt gecontroleerd
+    of elke member uit de squad (forEach) een avatar heeft ingevuld. Als het antwoord hierop ja is,
+    dan wordt er een img tag gegenereerd met daarin de avatar en een alt atribuut met diegene zijn naam.
+    Maar als die niet is ingevuld, dan wordt er ook een img tag gegenereerd maar dan met als source een 
+    placeholder plaatje. Elke keer als er een javascript moet worden uitgevoerd staat dit eromheen < > met procent tekens erin.-->
 <div class="members-grid-container">  
     <% squad.members.forEach(member => { %> 
         <article> 
